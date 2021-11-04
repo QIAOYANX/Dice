@@ -1,3 +1,4 @@
+int numDie = 0;
 void setup()
 {
   size(500,500);
@@ -6,14 +7,20 @@ void setup()
 }
   void draw()
 {
+  background(#DDB4F7);
   for(int y = 20; y< 500; y= y+60){
     for(int x = 10; x <500; x = x +70){
     Coin bob = new Coin(x,y);
     bob.show();
+    numDie += bob.die;
+    }
   }
+      text("Total:" + numDie , 200,10);
+  
 }
-}
+
 void mousePressed(){
+  numDie = 0;
   redraw();
 }
 //}
@@ -74,3 +81,4 @@ else if(die ==6){
 }
 }
 }
+
