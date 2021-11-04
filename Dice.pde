@@ -36,7 +36,7 @@ class Coin
     noStroke();
     fill(255);
     //ellipse(myX,myY, 50,50);
-    square(myX, myY, 50);
+    rect(myX, myY, 50,50);
     fill(0);
     if(die == 1)
     {
